@@ -1,0 +1,28 @@
+.balls-demo .ipad-screen {
+	background: @gray-base;
+}
+
+.ball(@x, @y, @radius: 60px) {
+	position: absolute;
+	border: 1px solid #fff;
+
+	border-radius: 100%;
+
+	top: @y - @radius;
+	left: @x - @radius;
+
+	height: @radius * 2;
+	width: @radius * 2;
+
+	-webkit-transition: all .1s;
+
+	&:hover {
+		border-width: 4px;
+	}
+}
+
+.ball-1 { .ball(20px, 30px); }
+.ball-2 { .ball(150px, 120px, 30px); }
+.ball-3 { .ball(240px, 320px, 40px); }
+.ball-4 { .ball(340px, 360px, 40px); }
+.ball-5 { .ball(480px, 260px, 40px); }
