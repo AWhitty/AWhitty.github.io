@@ -27,7 +27,9 @@
 			// border-bottom: 1px solid @gray;
 		}
 	}
+}
 
+a.section-header {
 	.section-title h2:after {
 		.ion;
 		content: "\f280";
@@ -35,6 +37,13 @@
 		.icon-medium;
 		.hidden-sm;
 		.hidden-xs;
+	}
+
+	&:hover {
+		text-decoration: none;
+		
+		// FIXME: Ick :(
+		opacity: 0.8;
 	}
 }
 
