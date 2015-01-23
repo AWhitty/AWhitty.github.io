@@ -1,0 +1,26 @@
+  <div class="container">
+    <div class="row">
+        <div class="navbar-header col-sm-6">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/">
+            {% include logo.html %}
+          </a>
+        </div>
+
+        <div class="navbar-collapse collapse col-sm-6">
+          <a href="#" class="hire-me btn btn-pill-md navbar-btn navbar-right">Get in touch</a>
+          <ul class="nav navbar-nav navbar-right">
+            <li {% if page.url == "/" %}   class="active"{% endif %}><a href="/">Home</a></li>
+            <!-- <li {% if page.url == "/about/" %}   class="active"{% endif %}><a href="/about/">Who?</a></li> -->
+            <li {% if page.url == "/work/" %}    class="active"{% endif %}><a href="/work/">Work</a></li>
+            <li {% if page.url == "/play/" %}  class="active"{% endif %}><a href="/play/">Play</a></li>
+            <li {% if page.url == "/school/" %}class="active"{% endif %}><a href="/school">School</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+    </div>
+  </div>

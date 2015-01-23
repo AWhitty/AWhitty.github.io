@@ -1,0 +1,80 @@
+@import "libraries/bootstrap/bootstrap";
+@import "libraries/popup";
+@import "variables";
+@import "buttons";
+@import "cards";
+@import "spacing";
+@import "video";
+
+// html, body {
+//   height: 100%;
+//   width: 100%;
+// }
+
+mark {
+  border-top: 1px solid #fff;
+  padding: 0 5px;
+}
+
+.page-content {
+  padding-top: @navbar-height;
+}
+
+.text-sans {
+  font-family: @font-family-sans-serif;
+}
+
+.text-lead {
+  font-size: @font-size-large;
+}
+
+.text-reader {
+  font-size: @font-size-large;
+  font-family: @font-family-serif;
+}
+
+strong {
+  font-weight: 600;
+}
+
+// Style the logo according to navbar color
+.navbar {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  #Logo {
+    height: @navbar-height/2;
+    margin-top: -@navbar-height/8;
+  }
+
+  .active > a {
+    font-weight: bold;
+  }
+}
+
+.navbar-default {
+  .hire-me { .btn-outline-primary; }
+
+  #Logo {
+    #A, #W {
+      fill: @gray-base;
+    }
+  }
+}
+
+
+.navbar-inverse {
+  .hire-me { .btn-outline-warning; }
+
+  #Logo {
+    #A, #W {
+      fill: #FFF;
+    }
+  }
+}
+
+// @media (min-width: @screen-md-min) {
+//   .container {
+//     margin-left: 3*@grid-gutter-width;
+//   }
+// }
