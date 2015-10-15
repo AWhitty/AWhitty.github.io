@@ -869,6 +869,9 @@ body {
   background: #fff;
   color: #211F1E; }
 
+strong {
+  font-family: "Apercu Bold", San Francisco, Roboto, Helvetica, sans-serif; }
+
 /**
  * Vanity Tag
  */
