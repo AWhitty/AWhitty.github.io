@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Austin on the Internet</title>
+
+  <link rel="canonical" href="http://www.awhitty.me/">
+  <link rel="stylesheet" href="normalize.css">
+  <link rel="stylesheet" href="happy.css">
+  <link rel="stylesheet" href="//f.fontdeck.com/s/css/zH28mslJNSfrEtk/N8vkA5GMvEQ/localhost/60686.css" type="text/css">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Austin Whittier studies Computer Science. He likes music, bicycles, coffee, and Google site descriptions. Hi.">
+</head>
+<body>
+<header>
+  <svg class="animated-logo" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 416 305">
+    <defs>
+      <mask id="aFatLine">
+        <polygon id="a-fat-line-mask"  class="swiping-mask" fill="white" points="70.483,0 172.459,304.391 227.277,304.391 125.844,0 "/>
+      </mask>
+      <mask id="wFatLineLeft">
+        <polygon id="w-fat-line-mask-left"  class="swiping-mask" fill="white" points="167,0 217.709,152.195 273.178,152.195 221.812,0 "/>
+      </mask>
+      <mask id="wFatLineRight">
+        <polygon id="w-fat-line-mask-right"  class="swiping-mask" fill="white" points="258.316,0 309.027,152.195 364.38,152.195 313.129,0 "/>
+      </mask>
+    </defs>
+    <g>
+      <polygon id="a-fat-line" class="fat-line logo-poly" points="70.483,0 172.459,304.391 227.277,304.391 125.844,0 " mask="url(#aFatLine)" />
+      <polygon id="w-fat-line-left" class="fat-line logo-poly" points="167,0 217.709,152.195 273.178,152.195 221.812,0 " mask="url(#wFatLineLeft)" />
+      <polygon id="w-fat-line-right" class="fat-line logo-poly" points="258.316,0 309.027,152.195 364.38,152.195 313.129,0 " mask="url(#wFatLineRight)" />
+    </g>
+    <rect id="a-horizontal" y="101.463" class="thin-line logo-poly" width="0px" height="5.074"/>
+  </svg>
+</header>
+<section class="nonsense">
+  <h1>Howdy, my name is Austin Whittier.</h1>
+  <p>I help people turn their ideas into living, breathing experiences on the Web and elsewhere.</p>
+  <p class="business-y">Currently, I am 🔥open for business🔥.</p>
+</section>
+<section class="touchy-feely">
+  <img class="smile big-smile" src="smile.svg" alt="Smile">
+  <img class="smile small-smile" src="smile.svg" alt="Smile">
+  <img class="smile lonely-smile" src="smile.svg" alt="Smile">
+  <a href="#" class="big-cute-button">Get in touch</a>
+</section>
+<section class="on-the-gram">
+  <h2>Prepare for Instagram photos&hellip;</h2>
+
+  <div class="instagram-photos"></div>
+
+  <a href="https://www.instagram.com/austinwhittier/">See more</a>
+</section>
+<footer>
+  <p>Thanks for visiting :)</p>
+</footer>
+
+<script>
+var script = document.createElement('script');
+var gram = document.getElementsByClassName('instagram-photos')[0];
+script.src = 'https://api.instagram.com/v1/users/37891111/media/recent/?client_id=5176926109814edaaa1c5c5c6b4ca251&count=5&callback=showImages'
+document.getElementsByTagName('head')[0].appendChild(script);
+function showImages(response) {
+  response.data.forEach(function (media) {
+    var a = document.createElement('a');
+    var img = document.createElement('img');
+    var caption = document.createElement('p');
+
+    a.setAttribute('href', media.link);
+    a.classList.add('instagram-media');
+
+    img.setAttribute('src', media.images.standard_resolution.url.replace(/s640x640\//,""));
+    img.setAttribute('alt', media.caption.text);
+
+    a.appendChild(img);
+
+    if (media.caption.text) {
+      caption.textContent = media.caption.text;
+      a.appendChild(caption);
+    }
+    
+    gram.appendChild(a);
+  })
+}
+</script>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-37555918-1', 'auto');
+  ga('send', 'pageview');
+</script>
+</body>
+</html>
