@@ -64,7 +64,7 @@
 <script>
 var script = document.createElement('script');
 var gram = document.getElementsByClassName('instagram-photos')[0];
-script.src = 'https://api.instagram.com/v1/users/37891111/media/recent/?client_id=5176926109814edaaa1c5c5c6b4ca251&count=5&callback=showImages'
+script.src = 'https://api.instagram.com/v1/users/37891111/media/recent/?access_token=37891111.67c4caa.1c1334ea2fe04c28a553b0b3581e5f0c&count=5&callback=showImages'
 document.getElementsByTagName('head')[0].appendChild(script);
 function showImages(response) {
   response.data.forEach(function (media) {
