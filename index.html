@@ -61,21 +61,23 @@
 </footer>
 
 <script>
-var script = document.createElement('script');
-var gram = document.getElementsByClassName('instagram-photos')[0];
-script.src = 'https://api.instagram.com/v1/users/37891111/media/recent/?access_token=37891111.67c4caa.1c1334ea2fe04c28a553b0b3581e5f0c&count=5&callback=showImages'
-document.getElementsByTagName('head')[0].appendChild(script);
+var script = document.createElement("script");
+var gram = document.getElementById("instagram-photos");
+script.src =
+  "https://api.instagram.com/v1/users/37891111/media/recent/?access_token=37891111.67c4caa.1c1334ea2fe04c28a553b0b3581e5f0c&count=5&callback=showImages";
+document.getElementsByTagName("head")[0].appendChild(script);
+
 function showImages(response) {
-  response.data.forEach(function (media) {
-    var a = document.createElement('a');
-    var img = document.createElement('img');
-    var caption = document.createElement('p');
+  response.data.forEach(function(media) {
+    var a = document.createElement("a");
+    var img = document.createElement("img");
+    var caption = document.createElement("p");
 
-    a.setAttribute('href', media.link);
-    a.classList.add('instagram-media');
+    a.setAttribute("href", media.link);
+    a.classList.add("instagram-media");
 
-    img.setAttribute('src', media.images.standard_resolution.url.replace(/s640x640\//,""));
-    img.setAttribute('alt', media.caption.text);
+    img.setAttribute("src", media.images.standard_resolution.url);
+    img.setAttribute("alt", media.caption.text);
 
     a.appendChild(img);
 
@@ -85,7 +87,7 @@ function showImages(response) {
     }
 
     gram.appendChild(a);
-  })
+  });
 }
 </script>
 
