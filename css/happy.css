@@ -52,7 +52,7 @@ p {
 }
 
 a {
-  color: #FF4C6D;
+  color: #524DFF;
   font-weight: 600;
   text-decoration: none;
 }
@@ -89,18 +89,13 @@ a:hover {
 
 .elsewhere-link-with-text {
   padding-right: 12px;
-  color: #FF4C6D;
+  color: #524DFF;
 }
 
 .elsewhere-link:hover {
   text-decoration: none;
   background: #F5FAFF;
   color: #524DFF;
-}
-
-.elsewhere-link-with-text:hover {
-  background: #FFF5FA;
-  color: #FF4C6D;
 }
 
 .elsewhere-text {
