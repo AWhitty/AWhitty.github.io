@@ -1,19 +1,3 @@
-@font-face {
-  font-family: 'Moderat';
-  font-weight: 400;
-  src: url("/fonts/Moderat-Regular.woff2") format("woff2"),
-       url("/fonts/Moderat-Regular.woff") format("woff"),
-       url("/fonts/Moderat-Regular.eot") format("eot");
-}
-
-@font-face {
-  font-family: 'Moderat';
-  font-weight: 600;
-  src: url("/fonts/Moderat-Black.woff2") format("woff2"),
-       url("/fonts/Moderat-Black.woff") format("woff"),
-       url("/fonts/Moderat-Black.eot") format("eot");
-}
-
 * {
   box-sizing: border-box;
 }
@@ -30,8 +14,19 @@ html, body {
 body {
   display: flex;
   font-family: 'Rubik', sans-serif;
+  flex-direction: column;
   color: #262829;
   font-size: 16px;
+}
+
+.banner {
+  background-color: #FFC506;
+  color: #6F3602;
+  padding: 60px 120px;
+}
+
+.banner p {
+  max-width: 680px;
 }
 
 .content-container {
