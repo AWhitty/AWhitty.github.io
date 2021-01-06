@@ -140,6 +140,10 @@ a:hover {
     padding-right: 20px;
     max-width: 720px;
   }
+
+  .banner {
+    padding: 20px;
+  }
 }
 
 @media (max-width: 500px) {
